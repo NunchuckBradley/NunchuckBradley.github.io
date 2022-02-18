@@ -1,0 +1,44 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+}
+
+.content-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2em;
+  background-color: white;
+}
+
+
+.wrapper {
+  width: $content-width;
+  margin: auto;
+  background-color: white;
+}
+
+
+// https://pixabay.com/images/search/repeating/
+body {
+  background-image: url("/assets/images/fire.webp");
+  // background-image: url("/assets/images/rose.jpg");
+  background-image: url("/assets/images/fire2.jpg");
+  background-repeat: repeat;
+}
+
+.recents {
+  ul {
+    list-style: square;
+  }
+  span {
+    color: gray;
+  }
+  a {
+    color: #990000;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: line-through;
+  }
+}

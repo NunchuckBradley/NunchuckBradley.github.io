@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 3em;
+  padding: 1em;
+  box-sizing: border-box;
+  border-top: $margins;
+}
+.footer-col-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-col {
+  width: 250px;
+}
