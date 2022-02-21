@@ -3,3 +3,7 @@ layout: default
 ---
 
 {{ content }}
+
+{% if page.show_post_list == true %}
+  {% include post_list.html %}
+{% endif %}

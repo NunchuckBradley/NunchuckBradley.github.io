@@ -1,0 +1,27 @@
+<div class="recents">
+  {%- if site.posts.size > 0 -%}
+    {%- if page.list_title -%}
+      <h3 class="post-list-heading">{{ page.list_title }}</h3>
+    {%- endif -%}
+    <ul class="post-list">
+      {%- assign date_format = "%d-%b-%Y" -%}
+      {%- assign page_limit = page.page_limit | default: 3 -%}
+      {%- assign category = page.show_post_category | default: false -%}
+
+      {%- for post in site.posts limit:page_limit -%}
+        {%- if post.categories contains page.show_post_category or category == false -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <span>...</span>
+            <span><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+            <span>...</span>
+            <span>{{ post.categories | escape }}</span>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
