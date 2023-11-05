@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating a custom OS"
 date:   2023-11-05 20:00:00 +0000
-categories: programming
+categories: code
 ---
 
 
